@@ -1,0 +1,27 @@
+@import "../../../styles";
+$padding: 10px 20px;
+
+.accordion-container {
+  @include box-shadow;
+  padding: 0 10px 0 10px;
+  .header {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: $padding;
+    align-items: center;
+
+    i {
+      transition: all 0.3s ease-in;
+      color: $blue;
+
+      &.is-expanded {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .content {
+    padding: $padding;
+  }
+}

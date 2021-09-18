@@ -1,0 +1,17 @@
+<app-card title="StarRating" subtitle="Components">
+  <app-star-ratings body [rating]="4.8"></app-star-ratings>
+</app-card>
+<app-card [title]="'Card'" [subtitle]="'Components'" [iconClasses]="'fas fa-info-circle'">
+  <div class="footer" footer>This is card's footer</div>
+  <div class="body" body>This is card's body</div>
+</app-card>
+<app-card [title]="'Accordion'" [subtitle]="'Components'">
+  <app-accordion body [items]="items"></app-accordion>
+</app-card>
+<app-card title="Progress bar" [subtitle]="'Components'">
+  <div body>
+    <app-progress-bar [value]="progressValue"></app-progress-bar>
+    <button (click)="progressValue = 75">Update</button>
+  </div>
+</app-card>
+<app-top-of-page></app-top-of-page>

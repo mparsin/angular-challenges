@@ -1,0 +1,35 @@
+@import "../../../styles";
+
+
+
+  button {
+    position: fixed;
+    z-index: 2;
+    right: 1em;
+    bottom: 1em;
+    border-radius: 50%;
+    border: 0;
+    background-color: $orange;
+    color: white;
+    transition: all 1s ease-in;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+
+    i {
+     display: none;
+    }
+
+    @include box-shadow;
+
+    &.is-visible {
+      visibility: visible;
+      width: 3em;
+      height: 3em;
+      display: block;
+
+      i {
+        display: block;
+      }
+    }
+  }
