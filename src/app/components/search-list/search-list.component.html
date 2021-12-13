@@ -1,0 +1,8 @@
+<div class="search-list-container">
+<app-search-term (searchChanged)="searchChanged($event)"></app-search-term>
+<ul *ngIf="showList()" class="search-list">
+  <li *ngFor="let country of (countries | filterTerm:searchTerm)" (click)="selectCountry()">
+    {{country}}
+  </li>
+</ul>
+</div>

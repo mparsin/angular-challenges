@@ -1,3 +1,52 @@
+<app-card title="Pager" subtitle="Component">
+  <app-fade-in body=""></app-fade-in>
+</app-card>
+<app-card title="Tabs" subtitle="Component">
+  <app-tabs [tabs]="tabs" (selectedTabIndex)="selectedTabChanged($event)" body>
+    <app-pager *ngIf="selectedTabIndex === 0" [totalItems]="200"></app-pager>
+    <app-counter *ngIf="selectedTabIndex === 1"></app-counter>
+  </app-tabs>
+</app-card>
+<app-card title="Pager" subtitle="Component">
+  <app-pager [totalItems]="101" body></app-pager>
+</app-card>
+<app-card title="Simple Table" subtitle="Component">
+  <app-simple-table body></app-simple-table>
+</app-card>
+<app-card title="Counter" subtitle="Component">
+  <app-counter body></app-counter>
+</app-card>
+<app-card title="Search List" subtitle="Component">
+  <app-search-list body></app-search-list>
+</app-card>
+<app-card title="Search Term" subtitle="Component">
+  <app-search-term body placeholder="Search..." (searchChanged)="reportSearchChanged($event)"></app-search-term>
+</app-card>
+<app-card title="Toggle" subtitle="Component">
+  <app-toggle body></app-toggle>
+</app-card>
+<app-card title="Quote" subtitle="Component">
+  <app-quote body [quote]="'You get paid in direct proportion to the difficulty of the problems that you solve'"
+             author="Elon Musk" title="Inventor"></app-quote>
+</app-card>
+<app-card title="Modal" subtitle="component">
+  <app-modal [isOpen]="false" title="Modal Test header" body #modal>
+    This is modal dialog content
+  </app-modal>
+  <button footer (click)="modal.isOpen=true">Open</button>
+</app-card>
+<app-card title="Credit card input" subtitle="Component">
+  <div body>
+    <app-credit-card-input ccNumber="4321432143214321"></app-credit-card-input>
+    <app-credit-card-input ccNumber="4321432143214321" [isReadOnly]="true"></app-credit-card-input>
+  </div>
+</app-card>
+<app-card title="Loading" subtitle="Component">
+  <div body>
+    <app-loading [isLoading]="isLoading" [loadingType]="LoadingTypeEnum.Text"></app-loading>
+    <button (click)="isLoading = !isLoading">Toggle is loading</button>
+  </div>
+</app-card>
 <app-card title="StarRating" subtitle="Components">
   <app-star-ratings body [rating]="4.8"></app-star-ratings>
 </app-card>

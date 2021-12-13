@@ -1,0 +1,12 @@
+<div class="modal-container" [style.display]="isOpen ? 'block' : 'none'" (click)="isOpen=false">
+  <div class="modal">
+    <div class="header">
+      <span>{{title}}</span>
+      <i class="fa fa-times" (click)="isOpen=false"></i>
+    </div>
+    <div class="body">
+      <ng-content></ng-content>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="input-container">
+  <ng-container [ngSwitch]="ccNumber[0]">
+    <i *ngSwitchCase="'4'" class="fab fa-cc-visa"></i>
+    <i *ngSwitchCase="'3'" class="fab fa-cc-amex"></i>
+    <i *ngSwitchDefault class="fa fa-credit-card"></i>
+  </ng-container>
+  <input type="text" [(ngModel)]="ccNumber" [readOnly]="isReadOnly">
+</div>

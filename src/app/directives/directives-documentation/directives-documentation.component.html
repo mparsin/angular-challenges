@@ -1,1 +1,6 @@
-<p>directives-documentation works!</p>
+<app-card title="Ripple" subtitle="directive">
+  <button footer appRipple="ripple2">Ripple effect</button>
+</app-card>
+<app-card title="Debounce" subtitle="directive">
+  <button footer appDebounce (onClicked)="log()">Log</button>
+</app-card>

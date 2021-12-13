@@ -1,0 +1,28 @@
+@import "./../../../styles";
+.quote-container {
+  background-color: $blue;
+  display: grid;
+  grid-gap: 1em;
+  padding: 1em;
+  border-left: 6px solid #6eb9f7;
+  grid-template-columns: auto 1fr;
+  @include box-shadow;
+  i {
+    font-size: xx-large;
+  }
+  i, header, .author, .title {
+    color: white;
+  }
+  footer {
+    grid-column: 1/3;
+    justify-self: end;
+    .title {
+      font-style: italic;
+    }
+    .author {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+}

@@ -1,0 +1,9 @@
+<div *ngIf="isLoading" class="loading-container" [class.visible]="isLoading">
+  <ng-container [ngSwitch]="loadingType">
+    <div *ngSwitchCase="LoadingTypeEnum.Circular" class="loading-spinner"></div>
+    <div *ngSwitchCase="LoadingTypeEnum.Text" class="loading-text">
+      <h2>Loading{{dots}}</h2>
+    </div>
+  </ng-container>
+  <button (click)="isLoading = false">Close</button>
+</div>

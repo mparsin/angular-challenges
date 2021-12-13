@@ -1,0 +1,28 @@
+.toggle-container {
+  border: #1e1e1e 1px solid;
+  width: 50px;
+  height: 20px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+
+  .toggle-value {
+    border: #1e1e1e 1px solid;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    left: 3%;
+    transition: all 0.5s;
+
+    &.is-on {
+      left: 65%;
+      background-color: red;
+    }
+  }
+}

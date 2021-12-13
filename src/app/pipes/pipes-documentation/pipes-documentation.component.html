@@ -1,1 +1,25 @@
-<p>pipes-documentation works!</p>
+<app-card title="Filter term" subtitle="Pipe">
+  <div body>
+  {{['Hello', 'World', 'Hello world'] | filterTerm:'world'}}
+  </div>
+</app-card>
+<app-card title="Flatten" subtitle="Pipe">
+  <div body>
+    {{ flattenData | flatten}}
+  </div>
+
+  <div class="footer" footer>
+    <button (click)="modifyFlatten()">Modify</button>
+    <button (click)="reassignFlatten()">Reassign</button>
+  </div>
+</app-card>
+<app-card title="Truncate" subtitle="Pipe">
+  <span body> {{longText|truncate:100}}</span>
+</app-card>
+<app-card title="Credit-card formatter" subtitle="pipe">
+  <div body>
+    <p>{{'1111222233334444' | creditCardFormatter}}</p>
+    <p>{{'111111111111111111111111111111' | creditCardFormatter}}</p>
+    <p>{{'a111222233334444' | creditCardFormatter}}</p>
+  </div>
+</app-card>

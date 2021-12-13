@@ -1,0 +1,4 @@
+<div class="tab-panel">
+  <button [class.active]="selectedTab === i" class="tab" *ngFor="let tab of tabs; let i = index" (click)="selectedTabChanged(i)">{{tab.name}}</button>
+</div>
+<ng-content></ng-content>

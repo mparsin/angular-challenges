@@ -12,4 +12,7 @@ export class DirectivesDocumentationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  log() {
+    console.log('Log')
+  }
 }

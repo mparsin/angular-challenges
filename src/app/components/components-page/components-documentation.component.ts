@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AccordionItemModel} from "src/app/components/accordion/accordion-item.model";
+import {LoadingTypeEnum} from "../loading/model/loading-type.enum";
+import {tab} from "../tabs/tabs.model";
 
 @Component({
   selector: 'app-components-page',
@@ -27,5 +29,16 @@ export class ComponentsDocumentationComponent {
     }
   ];
   progressValue = 25;
+  isLoading: boolean = false;
+  LoadingTypeEnum = LoadingTypeEnum;
+  tabs: tab[] = [{index: 1, name: "Pager"}, {index: 2, name: "Counter"}];
+  selectedTabIndex: number = 0;
 
+  reportSearchChanged($event: any) {
+    console.log($event)
+  }
+
+  selectedTabChanged($event: number) {
+    this.selectedTabIndex = $event
+  }
 }

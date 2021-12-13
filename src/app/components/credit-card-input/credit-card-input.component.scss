@@ -1,0 +1,12 @@
+.input-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  i {
+    position: absolute;
+    left: 30px
+  }
+  input {
+    padding-left: 40px;
+  }
+}

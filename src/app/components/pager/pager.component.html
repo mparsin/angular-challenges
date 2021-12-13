@@ -1,0 +1,5 @@
+<button class="pager-button" [disabled]="currentPage === 0" (click)="currentPage = currentPage - 1"><i class="fa fa-chevron-left"></i></button>
+<button class="pager-button" *ngFor="let page of pages" (click)="this.currentPage = page - 1"
+        [class.active]="currentPage + 1 === page">{{page}}</button>
+<button class="pager-button" [disabled]="currentPage === totalPages - 1" (click)="currentPage = currentPage + 1"><i
+  class="fa fa-chevron-right"></i></button>
